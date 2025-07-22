@@ -162,6 +162,9 @@ void Sorting_Selection_Buttons() {
     char Quick[] = "Quick Sort";
     char Merge[] = "Merge Sort";
 
+    // Increased spacing between buttons
+    int buttonSpacing = 60;
+
     // Only close the menu if the user actually selects a new algorithm
     bool prevBubble = selectedBubble;
     bool prevInsertion = selectedInsertion;
@@ -171,15 +174,15 @@ void Sorting_Selection_Buttons() {
     Button(startX, y, Bubble, GREEN, selectedBubble);
     if (!prevBubble && selectedBubble) { sortingMenuOpen = false; selectedInsertion = selectedQuick = selectedMerge = false; }
 
-    startX += MeasureText(Bubble, font) + 20;
+    startX += MeasureText(Bubble, font) + buttonSpacing;
     Button(startX, y, Insertion, GREEN, selectedInsertion);
     if (!prevInsertion && selectedInsertion) { sortingMenuOpen = false; selectedBubble = selectedQuick = selectedMerge = false; }
 
-    startX += MeasureText(Insertion, font) + 20;
+    startX += MeasureText(Insertion, font) + buttonSpacing;
     Button(startX, y, Quick, GREEN, selectedQuick);
     if (!prevQuick && selectedQuick) { sortingMenuOpen = false; selectedBubble = selectedInsertion = selectedMerge = false; }
 
-    startX += MeasureText(Quick, font) + 20;
+    startX += MeasureText(Quick, font) + buttonSpacing;
     Button(startX, y, Merge, GREEN, selectedMerge);
     if (!prevMerge && selectedMerge) { sortingMenuOpen = false; selectedBubble = selectedInsertion = selectedQuick = false; }
 }
