@@ -1,10 +1,10 @@
 # Makefile for macOS + Raylib
 
-# APP = SortingVisualizer
-# SRC = SortingVisualizer.cpp
+APP = SortingVisualizer
+SRC = SortingVisualizer.cpp
 
-APP = SortingVis
-SRC = SortingVis.cpp
+# APP = SortingVis
+# SRC = SortingVis.cpp
 
 CXX = g++
 CXXFLAGS = -I/opt/homebrew/include
